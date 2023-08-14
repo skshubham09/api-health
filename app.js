@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 
 const generateRandomCoordinates = () => ({
-    lat: Math.random() * (28.5 - 28.0) + 28.0,
-    lon: Math.random() * (77.5 - 77.0) + 77.0,
+    lat: Math.random() * (28.41028362 - 28.39894851) + 28.39894851,
+    lon: Math.random() * (77.36357032 - 77.35048133) + 77.35048133,
 });
 
 const patientData = [
