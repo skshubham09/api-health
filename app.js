@@ -47,7 +47,7 @@ function updateCoordinates(){
 }
 
 setInterval(updateCoordinates,5000)
-};
+
 
 app.get('/patients', (req, res) => {
     res.json(patientData);
