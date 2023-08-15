@@ -38,14 +38,15 @@ const patientData = [
     {"ID": "HZMI2960", "Name": "Prateek Singh", "Health_Condition": "CRITICAL"},
 ];
 
-const updateCoordinates = () => {
-    setInterval(() => {
-        for (const patient of patientData) {
-            const { lat, lon } = generateRandomCoordinates();
-            patient.lat = lat;
-            patient.lon = lon;
-        }
-    }, 5000); // Update every 5 seconds
+function updateCoordinates(){
+    for (const patient of patientData) {
+        const { lat, lon } = generateRandomCoordinates();
+        patient.lat = lat;
+        patient.lon = lon;
+    }
+}
+
+setInterval(updateCoordinates,5000)
 };
 
 app.get('/patients', (req, res) => {
